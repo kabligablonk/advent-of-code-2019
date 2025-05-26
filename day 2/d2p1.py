@@ -1,14 +1,12 @@
 def plus(x, y):
-    z = input_list[x] + input_list[y]
+    z = int(separated_list_elements[x]) + int(separated_list_elements[y])
     print(z)
 
-
 with open("input.txt", "r") as input_list:
-    list_input = []
-    for letters in input_list:
-        list_input.extend(letters.split(","))
-    str_input_1 = str(input_list [1])
-    str_input_2 = str(input_list [2])
-    if list_input[0] == 1:
-        plus(str_input_1, str_input_2)
-    print(list_input)
+    separated_list_elements = []
+    for elements in input_list:
+        separated_list_elements.extend(elements.split(","))
+    string_input_1 = int(separated_list_elements [1])
+    string_input_2 = int(separated_list_elements [2])
+    if int(separated_list_elements[0]) == 1:
+        plus(string_input_1, string_input_2)
